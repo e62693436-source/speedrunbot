@@ -9,8 +9,9 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-      - run: chmod +x gradlew && ./gradlew build --no-daemon
+      - name: Build
+        run: cd SpeedrunMod && chmod +x gradlew && ./gradlew build --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: speedrunbot-jar
-          path: build/libs/speedrunbot-1.0.0.jar
+          path: SpeedrunMod/build/libs/speedrunbot-1.0.0.jar
