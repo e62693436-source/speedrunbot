@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "speedrunbot",
+  "version": "1.0.0",
+  "name": "SpeedrunBot",
+  "description": "Bot automatique pour finir Minecraft - tue l'Ender Dragon",
+  "authors": ["SpeedrunBot"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.speedrunbot.SpeedrunBotClient"]
+  },
+  "mixins": ["speedrunbot.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.21.1",
+    "fabric-api": "*"
+  }
+}
